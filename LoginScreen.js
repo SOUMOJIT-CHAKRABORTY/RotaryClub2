@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     // position: "relative",
     backgroundColor: "#0782F9",
     paddingBottom: 190,
-    paddingTop: 15,
+    paddingTop: 40,
   },
   inputContainer: {
     width: "80%",

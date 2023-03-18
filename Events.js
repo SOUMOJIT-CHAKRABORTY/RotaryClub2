@@ -6,14 +6,14 @@ import { useNavigation } from "@react-navigation/native";
 const Events = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{ paddingTop: 10 }}>
-      {/* <Icon
+    <ScrollView style={{ paddingTop: 10, fontFamily: "custom-font" }}>
+      <Icon
         name="leftcircle"
         size={30}
         style={{ position: "absolute", top: 5, left: 10, zIndex: 1 }}
         color={"#FFA500"}
         onPress={() => navigation.replace("Transaction")}
-      /> */}
+      />
 
       <Text
         style={{
@@ -26,7 +26,7 @@ const Events = () => {
       >
         EVENTS
       </Text>
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center", fontFamily: "custom-font" }}>
         <View
           style={{
             alignItems: "center",
@@ -47,6 +47,7 @@ const Events = () => {
             marginBottom: 30,
             paddingHorizontal: 15,
             paddingTop: 10,
+            fontFamily: "custom-font",
           }}
         >
           <Text
@@ -56,6 +57,7 @@ const Events = () => {
               fontWeight: "800",
               color: "#02529c",
               marginBottom: 5,
+              fontFamily: "custom-font",
             }}
           >
             ROTARIANS LEAD BY EXAMPLE
@@ -66,6 +68,7 @@ const Events = () => {
               fontSize: 19,
               fontWeight: "bold",
               marginBottom: 8,
+              fontFamily: "custom-font",
             }}
           >
             May 10, 2022
@@ -77,6 +80,7 @@ const Events = () => {
               fontSize: 17,
               fontWeight: "600",
               color: "gray",
+              fontFamily: "custom-font",
             }}
           >
             Our Dear Rotarian Rusi Taraporevala willed amunificent donation of
@@ -136,6 +140,7 @@ const Events = () => {
               fontSize: 17,
               fontWeight: "600",
               color: "gray",
+              fontFamily: "custom-font",
             }}
           >
             Under our Global Grant No 2099621, we had a total of $5,09,653 (INR
@@ -144,6 +149,64 @@ const Events = () => {
             disease. As on February 21st, 2022, out of the abovementioned funds
             we have utilised INR 2,55,26,163/- and committed a further INR
             675000.15/- (patients are yet to be discharged).
+          </Text>
+        </View>
+      </View>
+      <View style={{ alignItems: "center" }}>
+        <View style={{ alignItems: "center" }}>
+          <Image
+            style={{ height: 250, width: 390 }}
+            source={require("./assets/catal.jpg")}
+          />
+        </View>
+        <View
+          style={{
+            height: 320,
+            width: 390,
+            backgroundColor: "#ffffff",
+            borderWidth: 0.5,
+            borderColor: "#d3d3d3",
+            marginBottom: 30,
+            paddingHorizontal: 15,
+            paddingTop: 10,
+          }}
+        >
+          <Text
+            style={{
+              textAlign: "left",
+              fontSize: 19,
+              fontWeight: "800",
+              color: "#02529c",
+            }}
+          >
+            BEING A CATALYST FOR CHANGE
+          </Text>
+          <Text
+            style={{
+              textAlign: "left",
+              fontSize: 19,
+              fontWeight: "bold",
+              marginBottom: 5,
+            }}
+          >
+            July 28, 2020
+          </Text>
+          <Text
+            style={{
+              textAlign: "justify",
+              fontSize: 17,
+              fontWeight: "600",
+              color: "gray",
+              marginBottom: 8,
+              fontFamily: "custom-font",
+            }}
+          >
+            The total amount raised by Aryaman’s school, The Cathedral & John
+            Connon School in Mumbai, was Rs 32.26 lakh of which Aryaman raised
+            more than 25 per cent and also the single highest individual amount
+            raised for the campaign. When the pandemic first hit, Aryaman, who
+            is in the 12th standard and am doing the International Baccalaureate
+            Diploma Program, felt there was no way for him to contribute.
           </Text>
         </View>
       </View>
@@ -193,6 +256,7 @@ const Events = () => {
               fontWeight: "600",
               color: "gray",
               marginBottom: 8,
+              fontFamily: "custom-font",
             }}
           >
             Singer Sonu Nigam put his vocal chords to good use with his stellar
@@ -201,6 +265,64 @@ const Events = () => {
             The event was a great success, thanks to the efforts of hard-working
             Rotarians, Rotarian Partners and Retractors. This was Sonu Nigam’s
             first show in India since 2008.
+          </Text>
+        </View>
+      </View>
+      <View style={{ alignItems: "center" }}>
+        <View style={{ alignItems: "center" }}>
+          <Image
+            style={{ height: 250, width: 390 }}
+            source={require("./assets/salan.jpg")}
+          />
+        </View>
+        <View
+          style={{
+            height: 320,
+            width: 390,
+            backgroundColor: "#ffffff",
+            borderWidth: 0.5,
+            borderColor: "#d3d3d3",
+            marginBottom: 30,
+            paddingHorizontal: 15,
+            paddingTop: 10,
+          }}
+        >
+          <Text
+            style={{
+              textAlign: "left",
+              fontSize: 19,
+              fontWeight: "800",
+              color: "#02529c",
+            }}
+          >
+            CHHOTI SI ASHA, BADA SA DIL
+          </Text>
+          <Text
+            style={{
+              textAlign: "left",
+              fontSize: 19,
+              fontWeight: "bold",
+              marginBottom: 5,
+            }}
+          >
+            June 30, 2020
+          </Text>
+          <Text
+            style={{
+              textAlign: "justify",
+              fontSize: 17,
+              fontWeight: "600",
+              color: "gray",
+              marginBottom: 8,
+              fontFamily: "custom-font",
+            }}
+          >
+            The initiative, jointly created by Rotary India, Rotary Club of
+            Bombay and Wizcraft International Entertainment and supported by
+            Being Human.- The Salman Khan Foundation and partnered by Ask
+            Nestle.in and Finolex Pipes, was a globally televised fundraiser
+            held on Colours TV on Sunday 28, June, 2020. Chhoti Si Asha was our
+            initiative to especially focus on the holistic development.
           </Text>
         </View>
       </View>

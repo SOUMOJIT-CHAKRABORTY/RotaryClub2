@@ -21,6 +21,13 @@ const HelpDesk = () => {
       style={{ flex: 1, backgroundColor: "white", marginTop: 0 }}
       contentContainerStyle={{ justifyContent: "space-evenly" }}
     >
+      <Icon
+        name="leftcircle"
+        size={26}
+        color={"#FFA500"}
+        style={{ top: 5, left: 10, zIndex: 1, position: "absolute" }}
+        onPress={() => navigation.replace("DrawerNavigator")}
+      />
       <Text
         style={{
           textAlign: "center",
@@ -53,6 +60,7 @@ const HelpDesk = () => {
           justifyContent: "center",
           marginTop: 30,
           alignItems: "center",
+          fontFamily: "custom-font",
         }}
       >
         <Facebook
@@ -94,5 +102,6 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 26,
     lineHeight: 30,
+    fontFamily: "custom-font",
   },
 });

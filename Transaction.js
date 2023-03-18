@@ -21,34 +21,30 @@ import { auth, db } from "./firebase/firebase";
 const TransactionHistory = () => {
   const navigation = useNavigation();
   const [hamberger, setHamberger] = useState(false);
-  const [name, setName] = useState("");
+  const [name, setName] = useState({
+    name: auth.currentUser.displayName,
+    email: auth.currentUser.email,
+  });
 
   useEffect(() => {
-    const fetchData = async () => {
+    async function fetchUserListings() {
       const listingRef = collection(db, "users");
-      const querySnap = await getDocs(listingRef);
-      // setLastFetchListing(lastVisible);
-      const docs = querySnap.docs.map((doc) => {
-        const data = doc.data();
-        data.id = doc.id;
-
-        return data;
+      const q = query(
+        listingRef,
+        where("Rotary_Id", "==", auth.currentUser.uid)
+      );
+      const quarySnap = await getDocs(q);
+      let listings = [];
+      quarySnap.forEach((doc) => {
+        return listings.push({
+          id: doc.id,
+          data: doc.data(),
+        });
       });
-      setName(docs);
-    };
-    console.log(name);
-    // const RealName = name.forEach((names) => {
-    //   let Naming = names;
-    //   if (Naming.Email === auth.currentUser.uid) {
-    //     return Naming;
-    //   }
-    //   console.log(Naming);
-    //   //   console.log(names.Name);
-    //   return Naming;
-    // });
-    // // console.log(RealName);
-
-    fetchData();
+      // setListings(listings);
+      // setLoading(false);
+    }
+    fetchUserListings();
   }, []);
 
   //   const handleSignOut = () => {
@@ -84,24 +80,22 @@ const TransactionHistory = () => {
         style={{
           fontWeight: "bold",
           marginBottom: 5,
+          marginTop: 5,
           textAlign: "center",
-          fontSize: 16,
+          fontSize: 20,
+          fontFamily: "custom-font",
         }}
       >
-        {` WELCOME : ${
-          auth.currentUser.displayName
-            ? auth.currentUser.displayName
-            : auth.currentUser.email
-        } `}
+        {` Welcome  Riya `}
       </Text>
 
       <>
-        <Icon3
+        {/* <Icon3
           name="logout"
           size={30}
           style={{ position: "absolute", top: 2, right: 5, marginRight: 5 }}
           onPress={handleSignOut}
-        />
+        /> */}
       </>
 
       {/* {hamberger && (
@@ -344,6 +338,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     // alignItems: "center",
     // marginLeft: 10,
+    fontFamily: "custom-font",
   },
   button: {
     backgroundColor: "#0782F9",

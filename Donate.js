@@ -4,6 +4,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  ImageBackground,
   TextInput,
 } from "react-native";
 import React, { useState } from "react";
@@ -49,13 +50,13 @@ const Donate = () => {
     <KeyboardAwareScrollView
       style={{ backgroundColor: "white", height: "100%" }}
     >
-      {/* <Icon
+      <Icon
         name="leftcircle"
         size={30}
         style={{ top: 5, left: 10, zIndex: 1, position: "absolute" }}
         color={"#FFA500"}
-        onPress={() => navigation.replace("Transaction")}
-      /> */}
+        onPress={() => navigation.replace("DrawerNavigator")}
+      />
 
       <View
         style={{
@@ -106,76 +107,123 @@ const Donate = () => {
           }}
         >
           <View style={styles[state]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/education.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              EDUCATION
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                EDUCATION
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                onPress={() => setState("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state1]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/book.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Bhavishya
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState1("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  marginTop: 25,
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Bhavishya
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState1("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state2]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/lighthouse.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Lighthouse
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState2("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  marginTop: 25,
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Lighthouse
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState2("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
         </View>
         <View
@@ -186,76 +234,121 @@ const Donate = () => {
           }}
         >
           <View style={styles[state3]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/scholarship.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 13,
-                marginTop: 25,
-                fontWeight: "800",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Scholarships
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState3("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 13,
+                  color: "white",
+                  marginTop: 25,
+                  fontWeight: "800",
+                }}
+              >
+                {" "}
+                Scholarships
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState3("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state4]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/training.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Training
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState4("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  color: "white",
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Training
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState4("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state5]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/welfare.png")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Welfare
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState5("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  color: "white",
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Welfare
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState5("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
         </View>
         <View
@@ -266,76 +359,121 @@ const Donate = () => {
           }}
         >
           <View style={styles[state6]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/covid.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Covid 19
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState6("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  color: "white",
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Covid 19
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState6("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state7]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/yoga.jpeg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Yoga
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState7("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  fontSize: 16,
+                  color: "white",
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Yoga
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState7("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state8]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/cancer.png")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Cancer
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState8("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Cancer
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState8("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
         </View>
         <View
@@ -346,76 +484,121 @@ const Donate = () => {
           }}
         >
           <View style={styles[state9]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/clinic.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              RCB Clinic
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState9("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                RCB Clinic
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState9("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state10]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/nature.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Nature
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState10("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Nature
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState10("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state11]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/legal.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Legal Aid
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState11("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Legal Aid
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState11("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
         </View>
         <View
@@ -426,76 +609,121 @@ const Donate = () => {
           }}
         >
           <View style={styles[state12]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/tiger.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Animal
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState12("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Animal
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState12("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state13]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/nutri.jpg")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              Nutrition
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState13("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                Nutrition
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState13("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
           <View style={styles[state14]}>
-            <Text
+            <ImageBackground
+              source={require("./assets/card-img/yep1.png")}
               style={{
-                marginBottom: 30,
-                fontSize: 16,
-                marginTop: 25,
-                fontWeight: "700",
+                width: "100%",
+                height: "100%",
+                borderRadius: 20,
+
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {" "}
-              YEP
-            </Text>
-            <TouchableOpacity
-              style={{
-                paddingHorizontal: 14,
-                paddingVertical: 4,
-                backgroundColor: "#FFA500",
-                borderRadius: 8,
-              }}
-              onPress={() => setState14("cardsActive")}
-            >
-              <Text style={{ fontWeight: "600", color: "white" }}>Select</Text>
-            </TouchableOpacity>
+              <Text
+                style={{
+                  marginBottom: 30,
+                  color: "white",
+                  fontSize: 16,
+                  marginTop: 25,
+                  fontWeight: "700",
+                }}
+              >
+                {" "}
+                YEP
+              </Text>
+              <TouchableOpacity
+                style={{
+                  paddingHorizontal: 14,
+                  paddingVertical: 4,
+                  backgroundColor: "#FFA500",
+                  borderRadius: 8,
+                }}
+                onPress={() => setState14("cardsActive")}
+              >
+                <Text style={{ fontWeight: "600", color: "white" }}>
+                  Select
+                </Text>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
         </View>
 
@@ -549,7 +777,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 1,
     marginBottom: 25,
-    padding: 20,
+    // padding: 20,
     width: "30%",
     borderRadius: 10,
     alignItems: "center",
@@ -559,7 +787,7 @@ const styles = StyleSheet.create({
     borderColor: "blue",
     borderWidth: 2,
     marginBottom: 25,
-    padding: 20,
+    // padding: 20,
     width: "30%",
     borderRadius: 10,
     alignItems: "center",

@@ -18,13 +18,13 @@ const PayMembership = () => {
     <KeyboardAwareScrollView
       style={{ backgroundColor: "white", height: "100%" }}
     >
-      {/* <Icon
+      <Icon
         name="leftcircle"
         size={30}
         color={"#FFA500"}
         style={{ top: 5, left: 10, zIndex: 1, position: "absolute" }}
-        onPress={() => navigation.replace("Transaction")}
-      /> */}
+        onPress={() => navigation.replace("DrawerNavigator")}
+      />
 
       <View
         style={{
@@ -70,7 +70,7 @@ const PayMembership = () => {
       <View style={{ alignItems: "center", justifyContent: "center" }}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.replace("ThankYou1")}
+          onPress={() => navigation.replace("ThankYouPage")}
         >
           <Text style={styles.buttonText}>Paid</Text>
         </TouchableOpacity>

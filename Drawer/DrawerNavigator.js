@@ -3,19 +3,47 @@ import Home from "../Home";
 import Events from "../Events";
 import Icon from "react-native-vector-icons/FontAwesome";
 import PayMembership from "../Payments";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  KeyboardAvoidingView,
+} from "react-native";
 import Donate from "../Donate";
 import HelpDesk from "../HelpDesk";
 import About from "../About";
 import TransactionHistory from "../Transaction";
 // import { NavigationContainer } from "@react-navigation/native";
+import Icon3 from "react-native-vector-icons/MaterialIcons";
+import { auth } from "../firebase/firebase";
+import { useNavigation } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
+
+// const navigation = useNavigation();
+
+const handleSignOut = () => {
+  auth
+    .signOut()
+    .then(() => {
+      navigation.navigate("LoginScreen");
+    })
+    .catch((error) => alert(error.message));
+};
+
+const CustomHeaderIcon = ({ onPress }) => (
+  <View style={{ paddingHorizontal: 10 }}>
+    <Icon3 name="logout" size={30} color="white" onPress={handleSignOut} />
+  </View>
+);
 
 export default function DrawerNavigator() {
   return (
     <Drawer.Navigator>
       {/* <Drawer.Screen name="Home" component={Home} /> */}
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={`Home `}
         options={{
           headerStyle: {
@@ -26,7 +54,7 @@ export default function DrawerNavigator() {
           //   title: "Rotary Club Bombay",
         }}
         component={Home}
-      />
+      /> */}
       <Drawer.Screen
         name={`Transaction `}
         options={{
@@ -35,6 +63,9 @@ export default function DrawerNavigator() {
           },
           headerTintColor: "#fff",
           headerTitleAlign: "center",
+          headerRight: ({ onPress }) => (
+            <CustomHeaderIcon onPress={handleSignOut} />
+          ),
           //   title: "Rotary Club Bombay",
         }}
         component={TransactionHistory}

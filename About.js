@@ -15,13 +15,13 @@ const About = () => {
       }}
       contentContainerStyle={{ justifyContent: "space-evenly" }}
     >
-      {/* <Icon
+      <Icon
         name="leftcircle"
         size={26}
         color={"#FFA500"}
         style={{ top: 5, left: 10, zIndex: 1, position: "absolute" }}
         onPress={() => navigation.replace("Transaction")}
-      /> */}
+      />
 
       <Text
         style={{
@@ -39,11 +39,12 @@ const About = () => {
       <Text
         style={{
           padding: 7,
-          margin: 5,
+          margin: 3,
           textAlign: "justify",
           color: "black",
           fontSize: 18,
           lineHeight: 20,
+          fontFamily: "custom-font",
         }}
       >
         The Rotary Club of Bombay is one of the pioneers in India of the rotary
@@ -64,6 +65,7 @@ const About = () => {
           color: "black",
           fontSize: 18,
           lineHeight: 20,
+          fontFamily: "custom-font",
         }}
       >
         Reading the list of subsequent presidents is like scanning the ‘Who’s
@@ -82,6 +84,7 @@ const About = () => {
           color: "black",
           fontSize: 18,
           lineHeight: 20,
+          fontFamily: "custom-font",
         }}
       >
         The membership of the Club has grown from 38 in 1929 to around 350
@@ -106,6 +109,7 @@ const About = () => {
           color: "black",
           fontSize: 18,
           lineHeight: 20,
+          fontFamily: "custom-font",
         }}
       >
         From the very beginning the pulse of Rotary has been and always will be
@@ -124,6 +128,7 @@ const About = () => {
           color: "black",
           fontSize: 18,
           lineHeight: 20,
+          fontFamily: "custom-font",
         }}
       >
         “The prayer in silence with faith for love is service in peace.” –

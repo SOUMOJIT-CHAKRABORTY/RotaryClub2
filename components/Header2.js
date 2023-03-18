@@ -17,13 +17,13 @@ const Header2 = () => {
           // left: 5,
           zIndex: 10,
         }}
-        onPress={() => navigation.replace("Login")}
+        onPress={() => navigation.replace("LoginScreen")}
         size={30}
       />
       <Text style={styles.header}> ADMIN LOGIN</Text>
       <Image
         style={{ height: 280, width: 340, borderRadius: 25, marginTop: 40 }}
-        source={require("../../assets/Loginlogo.jpg")}
+        source={require("../assets/Loginlogo.jpg")}
       />
     </View>
   );

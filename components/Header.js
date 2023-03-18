@@ -6,12 +6,12 @@ import { useNavigation } from "@react-navigation/native";
 const Header = () => {
   const navigation = useNavigation();
   return (
-    <View>
+    <View style={{ marginTop: 35 }}>
       <Icon
         color={"#FFA500"}
         size={30}
         name="leftcircle"
-        onPress={() => navigation.replace("GetStarted")}
+        onPress={() => navigation.replace("getStarted")}
         style={{ zIndex: 10 }}
       />
       <Text style={styles.header}>LOGIN</Text>
