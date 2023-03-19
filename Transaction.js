@@ -14,18 +14,25 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import Icon2 from "react-native-vector-icons/AntDesign";
 import Icon3 from "react-native-vector-icons/MaterialIcons";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { auth, db } from "./firebase/firebase";
 // import DonateMoney from "./DonateMoney";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ route }) => {
   const navigation = useNavigation();
   const [hamberger, setHamberger] = useState(false);
   const [name, setName] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
   });
-
+  // const { data } = route.params;
   useEffect(() => {
     async function fetchUserListings() {
       const listingRef = collection(db, "users");
@@ -41,6 +48,7 @@ const TransactionHistory = () => {
           data: doc.data(),
         });
       });
+      console.log(auth.currentUser);
       // setListings(listings);
       // setLoading(false);
     }
@@ -86,7 +94,7 @@ const TransactionHistory = () => {
           fontFamily: "custom-font",
         }}
       >
-        {` Welcome  Riya `}
+        {` Welcome ${auth.currentUser.displayName}`}
       </Text>
 
       <>

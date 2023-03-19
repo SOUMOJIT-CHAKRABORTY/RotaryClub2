@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Icon from "react-native-vector-icons/AntDesign";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigation } from "@react-navigation/native";
 import { auth, db } from "./firebase/firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -44,6 +44,9 @@ const Register = () => {
         saveData();
         navigator.replace("DrawerNavigator");
         // ...
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -51,7 +54,18 @@ const Register = () => {
         alert("Unable to Sign up! Please try again");
         // ..
       });
+    updateProfile(auth.currentUser, {
+      displayName: name,
+    });
   };
+  const currentUser = auth.currentUser;
+  useEffect(() => {
+    if (currentUser) {
+      updateProfile(auth.currentUser, {
+        displayName: name,
+      });
+    }
+  }, [currentUser]);
 
   return (
     <ScrollView

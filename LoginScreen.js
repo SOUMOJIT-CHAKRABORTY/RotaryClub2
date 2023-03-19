@@ -11,13 +11,20 @@ import {
 } from "react-native";
 import Header from "./components/Header";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  updateProfile,
+} from "firebase/auth";
 import { auth } from "./firebase/firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 const LoginScreen = () => {
   const navigator = useNavigation();
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  // const [username, setUsername] = useState("");
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -27,13 +34,27 @@ const LoginScreen = () => {
     });
   });
 
+  const currentUser = auth.currentUser;
+
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     updateProfile(auth.currentUser, {
+  //       displayName: username,
+  //     });
+  //   }
+  // }, [currentUser]);
+
   const handleSignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         alert("Login Successful");
-        navigator.replace("DrawerNavigator");
+        console.log(userCredential);
+        navigator.navigate("DrawerNavigator");
         // ...
+        // updateProfile(auth.currentUser, {
+        //   displayName: username,
+        // });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -52,6 +73,12 @@ const LoginScreen = () => {
           onChangeText={(text) => setEmail(text)}
           style={styles.input}
         />
+        {/* <TextInput
+          placeholder="Username"
+          value={username}
+          onChangeText={(text) => setUsername(text)}
+          style={styles.input}
+        /> */}
         <TextInput
           placeholder="Password"
           value={password}

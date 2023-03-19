@@ -22,24 +22,23 @@ import { useNavigation } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
 
-// const navigation = useNavigation();
-
-const handleSignOut = () => {
-  auth
-    .signOut()
-    .then(() => {
-      navigation.navigate("LoginScreen");
-    })
-    .catch((error) => alert(error.message));
-};
-
-const CustomHeaderIcon = ({ onPress }) => (
-  <View style={{ paddingHorizontal: 10 }}>
-    <Icon3 name="logout" size={30} color="white" onPress={handleSignOut} />
-  </View>
-);
-
 export default function DrawerNavigator() {
+  const navigation = useNavigation();
+
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        navigation.navigate("LoginScreen");
+      })
+      .catch((error) => alert(error.message));
+  };
+
+  const CustomHeaderIcon = ({ onPress }) => (
+    <View style={{ paddingHorizontal: 10 }}>
+      <Icon3 name="logout" size={30} color="white" onPress={handleSignOut} />
+    </View>
+  );
   return (
     <Drawer.Navigator>
       {/* <Drawer.Screen name="Home" component={Home} /> */}
