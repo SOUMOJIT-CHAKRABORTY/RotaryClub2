@@ -19,14 +19,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="FirstScreen"
           options={{
             headerTitleAlign: "center",
             headerShown: false,
           }}
           component={FirstScreen}
-        />
+        /> */}
         <Stack.Screen
           name="getStarted"
           options={{
@@ -62,11 +62,11 @@ export default function App() {
           options={{ headerShown: false }}
           component={Register}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Transaction"
           options={{ headerShown: false }}
           component={TransactionHistory}
-        />
+        /> */}
         <Stack.Screen
           name="ThankYouPage"
           options={{ headerShown: false }}

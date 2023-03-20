@@ -20,7 +20,7 @@ const About = () => {
         size={26}
         color={"#FFA500"}
         style={{ top: 5, left: 10, zIndex: 1, position: "absolute" }}
-        onPress={() => navigation.replace("Transaction")}
+        onPress={() => navigation.replace("DrawerNavigator")}
       />
 
       <Text
