@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import { useCallback, useEffect, useState } from "react";
 // import { TouchableOpacity } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/AntDesign";
@@ -31,11 +38,11 @@ const FirstScreen = () => {
   }
 
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         backgroundColor: "white",
-        // paddingTop: 35,
+        paddingBottom: 100,
         backgroundColor: "#02529c",
       }}
     >
@@ -108,7 +115,7 @@ const FirstScreen = () => {
         /> */}
       {/* </TouchableOpacity> */}
       {/* </View> */}
-    </View>
+    </ScrollView>
   );
 };
 
