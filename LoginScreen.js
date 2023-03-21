@@ -48,7 +48,7 @@ const LoginScreen = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        // alert("Login Successful");
+        alert("Login Successful");
         console.log(userCredential);
         navigator.navigate("DrawerNavigator");
         // ...
